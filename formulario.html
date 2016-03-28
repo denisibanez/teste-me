@@ -94,23 +94,26 @@
           <div class="form-circle">
             <span>JS</span>
           </div>
-          <form action="#">
+          <form action="#" method="post" id="passwordTest">
             <div class="form-group">
               <label for="exampleInputEmail1">Email</label>
               <input type="email" class="" id="exampleInputEmail1" placeholder="" required title="Todos os campos são obrigatórios">
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Senha</label>
-              <input type="password" class="l" id="exampleInputPassword1" placeholder="" required title="Todos os campos são obrigatórios">
+              <input type="password" class="" id="" placeholder="" required title="Todos os campos são obrigatórios">
             </div>
             <div class="form-group">
               <label for="exampleInputPassword2">Nova Senha</label>
-              <input type="password" class="" id="exampleInputPassword2" placeholder="" required title="Todos os campos são obrigatórios">
+              <input type="password" class="" id="password1" placeholder="" required title="Todos os campos são obrigatórios">
             </div>
             <div class="form-group">
-              <input type="password" class="impt-label" id="exampleInputPassword3" placeholder="Confirme a Nova Senha" required title="Todos os campos são obrigatórios">
+              <input type="password" class="impt-label" id="password2" placeholder="Confirme a Nova Senha" required title="Todos os campos são obrigatórios">
             </div>
-            <button type="submit" class="btn btn-form sombra" onclick="alert('Seus dados foram salvos com sucesso');">Salvar</button>
+            <div id="pass-info"></div>
+
+            <button type="submit" class="btn btn-form sombra">Salvar</button>
+
           </form>
         </div>
       </div>
@@ -119,6 +122,49 @@
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+    var password1       = $('#password1');
+    var password2       = $('#password2');
+    var passwordsInfo   = $('#pass-info');
+
+    passwordStrengthCheck(password1,password2,passwordsInfo);
+
+  });
+
+  function passwordStrengthCheck(password1, password2, passwordsInfo){
+    var WeakPass = /(?=.{3,}).*/;
+    var MediumPass = /^(?=\S*?[a-z])(?=\S*?[0-9])\S{3,}$/;
+    var StrongPass = /^(?=\S*?[A-Z])(?=\S*?[a-z])(?=\S*?[0-9])\S{3,}$/;
+    var VryStrongPass = /^(?=\S*?[A-Z])(?=\S*?[a-z])(?=\S*?[0-9])(?=\S*?[^\w\*])\S{3,}$/;
+
+    $(password1).on('keyup', function(e) {
+      if(VryStrongPass.test(password1.val())){
+        passwordsInfo.removeClass().addClass('vrystrongpass').html("Muito Forte! (Impressionante, por favor não se esqueça da password!)");
+      }
+      else if(StrongPass.test(password1.val())){
+        passwordsInfo.removeClass().addClass('strongpass').html("Forte! (Insira caracteres especiais para tornar ainda mais forte");
+      }
+      else if(MediumPass.test(password1.val())){
+        passwordsInfo.removeClass().addClass('goodpass').html("Bom! (Ponha letras maiúsculas)");
+      }
+      else if(WeakPass.test(password1.val())){
+        passwordsInfo.removeClass().addClass('stillweakpass').html("Algo fraco! (Digitos aumentar a força da password)");
+      }
+      else{
+        passwordsInfo.removeClass().addClass('weakpass').html("Muito fraca! (Deve ter 3 ou mais caracteres)");
+      }
+    });
+
+    $(password2).on('keyup', function(e) {
+      if(password1.val() !== password2.val()){
+        passwordsInfo.removeClass().addClass('weakpass').html("As passwords não são iguais!");
+      }else{
+        passwordsInfo.removeClass().addClass('goodpass').html("Passwords iguais!");
+      }
+    });
+  }
+  </script>
 
 </body>
 </html>
