@@ -1,0 +1,358 @@
+$cinza-icon:#f4f4f4;
+$bg-cinza:#bbbbbb;
+$cinza-font:#666666;
+$branco:#ffffff;
+$body-color:#eeeeee;
+$azul-btn:#64b5f6;
+$azul-icon:#cae1ef;
+$cinza:#9f9f9f;
+$azul-icon-2:#6bafd4;
+$cinza-form:#333333;
+body {
+  background-color: $body-color;
+}
+header {
+  margin: 5px 0 -5px 0;
+  background-color: $branco;
+}
+.logo {
+  padding: 10px 0 0px 0;
+}
+.user-icon {
+  border: 1px solid $cinza-icon;
+  border-radius: 500px;
+  width: 40px;
+  height: 40px;
+  padding: 3px 6px 3px 4px;
+  margin: 20px 0px 20px 0px;
+  float: left;
+}
+.glyphicon-user {
+  font-size: 20px;
+  color:$cinza-icon;
+  background-color: $bg-cinza;
+  width: 30px;
+  height: 30px;
+  border-radius: 500px;
+  padding: 6px 5px 3px 5px;
+}
+.user-info {
+  margin: 21px 0px  0px 0px;
+  span {
+    font-size: 10px;
+    font-weight: bolder;
+    color:$cinza-font;
+  }
+  a  {
+    padding-top: 10px;
+    text-decoration: none;
+    color:$cinza-font;
+    font-weight: bold;
+    font-size: 13px;
+  }
+}
+/**
+.user-info a:after {
+content:url('../img/seta-baixo.jpg');
+display:inline-block;
+margin:0px 0px 0px 40px;
+}
+**/
+.sombra {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.20);
+  -moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 0.20);
+  box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.20);
+}
+/**MENU**/
+.menu-estilo {
+  background-color: $cinza-font;
+  height: 100%;
+  margin-top: 5px;
+  min-height: 650px;
+}
+.navbar-default {
+  background-color: $cinza-font;
+  border-color: $cinza-font;
+}
+.navbar-nav1>li>a {
+  color: $branco !important;
+}
+.navbar-nav1>li>a:hover {
+  background-color: $cinza-font !important;
+  color:$bg-cinza !important;
+}
+.icon-menu {
+  margin-right: 15px;
+  font-size: 22px;
+}
+.sidebar-nav {
+  margin-left: -15px;
+}
+.margin-conteudo {
+  margin-top: 30px;
+}
+.bg-produto {
+  background-color: $branco;
+  padding: 15px 15px 15px 15px;
+}
+.box-produto {
+  span {
+    font-weight: bold;
+    color: $cinza-font;
+  }
+  h1 {
+
+    font-weight: bold;
+    color: $cinza-font;
+    font-size: 25px;
+  }
+  h2 {
+
+    font-weight: normal;
+    color: $cinza-font;
+    font-size: 12px;
+  }
+}
+.produto {
+  border: 1px solid $cinza-icon;
+  text-align: center;
+  padding: 15px 0 15px 0;
+}
+button {
+  background-color: $azul-btn;
+  width: 100%;
+  height: 45px;
+  a{
+    text-decoration: none;
+    color: $branco;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
+.calen {
+  z-index: 999;
+}
+.produtos-geral {
+  margin-top: 50px;
+}
+.cl-cart {
+  color: $branco !important;
+}
+.carousel-caption {
+  width: 100% !important;
+  height: 50px;
+  background-color: rgba(0,0,0,0.8);
+  text-align: left;
+  float: left;
+  left:0;
+  bottom: 0;
+  padding: 15px 0px 0px 15px;
+  font-weight: bold;
+  font-size: 18px;
+  span {
+    font-size: 16px;
+    color: $bg-cinza;
+  }
+}
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+  margin-left: -45px;
+}
+.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+  margin-right: -45px;
+}
+.seta-cinza {
+  color: $cinza;
+}
+.btn-seta {
+  width: 30px;
+  height: 30px;
+  background-color: $branco;
+}
+.content-ppv {
+  height: 140px;
+  width: 260px;
+  margin-top: 15px;
+}
+.ppv-circle {
+  background-color: $azul-icon;
+  border-radius: 500px;
+  width: 60px;
+  height: 60px;
+  padding: 9px 0px 25px 12px;
+  margin: 5px 10px;
+  span {
+    font-size: 30px;
+    color:$branco;
+    font-weight: lighter;
+  }
+}
+.popover {
+  border-radius: 0px !important;
+}
+.popover-content {
+  padding: 9px 0px !important;
+}
+.content-dds {
+  margin-left: 75px;
+  margin-top: -10px;
+  h1 {
+    color:$cinza-font;
+    font-weight: bold;
+    font-size: 13px;
+  }
+  span {
+    font-size: 12px;
+    font-weight: lighter;
+    color:$cinza;
+  }
+  a {
+    text-decoration: none;
+    color:$cinza-font;
+    font-weight: ligther;
+  }
+}
+.pdd {
+  position: relative;
+  top: -10px;
+}
+.pdd-2 {
+  position: relative;
+  top: -13px;
+  left: 5px;
+}
+.controls {
+  color:$cinza;
+  font-weight: bold;
+}
+.footer-ppv {
+  border-top: 1px solid $cinza-icon;
+  width: 100%;
+  padding: 10px 15px 0px 15px;
+  color: $cinza-font;
+}
+.glyphicon-comment {
+  color: $cinza-font;
+}
+.glyphicon-log-out {
+  @extend .glyphicon-comment;
+}
+
+@media (max-width:1549px) and (min-width:991px) {
+  .produtos-geral {
+    margin-top: 300px;
+  }
+}
+@media (min-width:1550px) {
+  .produtos-geral {
+    margin-top: 380px;
+  }
+  .menu-estilo {
+    min-height: 895px;
+  }
+}
+@media (max-width:991px) {
+  .calen {
+    margin-top: 50px;
+  }
+  .sidebar-nav {
+    margin-left: 20px;
+  }
+  .margin-conteudo {
+    margin-left: 60px;
+  }
+  .carousel {
+    z-index: 999;
+  }
+  #lateral {
+    padding:0 50px 0 0;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    font-size:1.2em;
+    background-color:$cinza-font;
+    min-height:1800px;
+    overflow:hidden;
+    width:200px;
+    position:absolute;
+    top:20;
+    left:-150px;
+    z-index:9999;
+  }
+  #lateral:before {
+    content: url(../img/icone-menu.png);
+    font-size:4em;
+    color:white;
+    position:fixed;
+    left:4px;
+    top:90px;
+  }
+  #lateral:hover:before, #lateral:focus:before {
+    left:-500px
+  }
+  #lateral:hover, #lateral:focus,  #lateral:active  {
+    -moz-transform: translate(150px, 0);
+    -webkit-transform: translate(150px, 0);
+    -o-transform: translate(150px, 0);
+    transform: translate(150px, 0);
+    padding-right:0;
+  }
+}
+/**FORMULARIO**/
+.formulario {
+  margin: 0 auto !important;
+  float: none !important;
+  background-color: $branco;
+  padding: 30px 30px 30px 30px;
+}
+.form-circle {
+  background-color: $azul-icon-2;
+  border-radius: 500px;
+  width: 130px;
+  height: 130px;
+  padding: 27px 0px 0px 33px;
+  @extend .formulario;
+  span {
+    font-size: 50px;
+    color:$branco;
+    font-weight: lighter;
+  }
+}
+input {
+  border-bottom: 1px solid $cinza-form !important;
+  border-left:none !important;
+  border-top:none !important;
+  border-right:none !important;
+  border-radius: 0px !important;
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: $cinza-form;
+  font-weight: bold;
+  padding-left: 0px !important;
+}
+label {
+  color: $bg-cinza;
+  font-weight: lighter;
+}
+.impt-label {
+  @extend label ;
+  font-size: 15px;
+  font-weight: normal;
+  border-bottom: 1px solid $bg-cinza !important;
+}
+.btn-form {
+  margin-top: 30px;
+  border-radius: 0px;
+  color: $branco;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+}
